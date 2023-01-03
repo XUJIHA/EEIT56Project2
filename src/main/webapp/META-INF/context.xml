@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context displayName="JSP Example" docBase="jspExample" path="/jspExample" reloadable="true">
+  <!--                  SQLServer                      -->
+  <Resource name="jdbc/Team3DB" type="javax.sql.DataSource"
+      username="sa" password="P@ssw0rd!!"
+      driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+      url="jdbc:sqlserver://localhost:1433;databaseName=Team3DB"    
+      maxTotal="8"
+      maxIdle="4"
+      maxWaitMillis="5000"
+  />  
+</Context>

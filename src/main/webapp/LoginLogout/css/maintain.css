@@ -1,0 +1,175 @@
+* {
+  /*   border: solid 2px black; */
+  vertical-align: top;
+  font-family: 微軟正黑體;
+  color: #021c82;
+  
+}
+body{
+	font-family: 微軟正黑體;
+}
+.card {
+	
+  width: 1500px;
+  height: 700px;
+  display: flex;
+/*   background-color: rgb(191, 213, 241, 0.2); */
+/*   overflow: hidden; */
+  margin:-40px 0px;
+}
+.left {
+  flex: 1;
+  align-content: right;
+  justify-content: right;
+  margin-top: 180px;
+  margin-left: 20px;
+  margin-right: 0px;
+  margin-bottom: 180px;
+/*   border-right: 2px solid black; */
+/*   background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Roasted_coffee_beans.jpg/1280px-Roasted_coffee_beans.jpg); */
+/*     background-size:cotain ; */
+
+/*   background-size: contain; */
+}
+.right {
+	
+  flex: 9;
+  padding-top: 140px;
+  margin-bottom: 240px;
+  margin-left: -250px;
+/*   width:70%; */
+/*   height:70%; */
+/*   left: -1500px; */
+/*    align-content: center; */
+}
+#insert{
+border-radius: 30px;
+  margin-left: 240px;
+  ox-sizing: border-box;
+/*   background-color: #f9e6ce; */
+  background-color: #F0E5EB;
+  
+  color: #26282a;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 45%);
+  width: 730px;
+  left: 80px;
+  min-height: 300px;
+  z-index: 1;
+  padding: 50px;
+  margin-top: -120px;
+  margin-bottom: 50px;
+  border: 1px solid transparent;
+  border-top: 1px solid #f1f1f5;
+}
+.table{
+/* 	background:#B8CEC2; */
+	width:820px;
+}
+.name{
+/* 	display:inline; */
+/* 	height:40; */
+	 width:560;
+	 border-radius:50px;
+	 font-size:20px;
+	 font-weight: bold;
+	 align-content: center;
+/* 	   justify-content: center; */
+}
+.products{
+	background-color: #d1dbcd;
+	padding-bottom: 10px;
+}
+img{
+	margin-right:7px;
+}
+.souname{
+/* 	padding: 2px ; */
+	justify-content: center;
+	align-content: center;
+}
+.down{
+	padding-bottom:7px;
+}
+/*button*/
+button {
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding-left: 0;
+  margin-left: 0px;
+/*   margin-right: 80px; */
+  font-size: inherit;
+  font-family: inherit;
+}
+button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+button:hover .circle {
+  width: 100%;
+}
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+button:hover .button-text {
+  color: #fff;
+}
+button:hover .button-text a:hover {
+  color: #fff;
+}
