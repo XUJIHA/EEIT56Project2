@@ -73,14 +73,13 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 					</ul>
 				</div>
 			</div>
-			<a href="<c:url value='/loginlogout/controller/searchAllServlet'/>" class="bk-btn">Customer
-								Data</a>
+			<a href="<c:url value='/loginlogout/controller/searchAllServlet'/>" class="bk-btn">Customer Data</a>
 		</div>
 		<nav class="mainmenu mobile-menu">
 			<ul>
-				<li><a href="./LoginLogout/alreadyindex.jsp">Home</a></li>
+				<li><a href="<c:url value='/LoginLogout/alreadyindex.jsp'/>">Home</a></li>
 				<li><a href="<c:url value='/ShowAllServlet' />">Rooms</a></li>
-				<li><a href="./Gift/gift.jsp">Gifts</a></li>
+				<li><a href="<c:url value='/Gift/gift.jsp'/>">Gifts</a></li>
 				<li><a href="<c:url value='/showAttractionsServlet' />">Attractions</a>
 					<ul class="dropdown">
 						<li><a
@@ -88,7 +87,8 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 								Attractions</a></li>
 					</ul></li>
 
-				<li><a href="<c:url value='./jsp01/RestaurantHomepage.jsp'/>">Restaurant</a></li>
+				<li><a
+					href="<c:url value='/jsp01/RestaurantHomepage.jsp'/>">Restaurant</a></li>
 			</ul>
 		</nav>
 		<div id="mobile-menu-wrap"></div>
@@ -123,7 +123,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 									class="fa fa-twitter"></i></a> <a><i class="fa fa-tripadvisor"></i></a>
 								<a><i class="fa fa-instagram"></i></a>
 							</div>
-							<a href="<c:url value='/CRUD/searchAllServlet'/>" class="bk-btn">Customer
+							<a href="<c:url value='/loginlogout/controller/searchAllServlet'/>" class="bk-btn">Customer
 								Data</a>
 							<div class="language-option">
 								<img src="img/flag.jpg" alt=""> <span>EN <i
@@ -145,7 +145,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 				<div class="row">
 					<div class="col-lg-2">
 						<div class="logo">
-							<a href="./LoginLogout/alreadyindex.jsp"> <img src="img/logo.png" alt="">
+							<a href="<c:url value='/LoginLogout/alreadyindex.jsp'/>"> <img src="img/logo.png" alt="">
 							</a>
 						</div>
 					</div>
@@ -153,17 +153,18 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 						<div class="nav-menu">
 							<nav class="mainmenu">
 								<ul>
-									<li><a href="./LoginLogout/alreadyindex.jsp">Home</a></li>
+									<li><a href="<c:url value='/LoginLogout/alreadyindex.jsp'/>">Home</a></li>
 									<li><a href="<c:url value='/ShowAllServlet' />">Rooms</a></li>
-									<li><a href="./Gift/gift.jsp">Gifts</a></li>
+									<li><a href="<c:url value='/Gift/gift.jsp'/>">Gifts</a></li>
 									<li><a href="<c:url value='/showAttractionsServlet' />">Attractions</a>
 										<ul class="dropdown">
 											<li><a
 												href="<c:url value='/attractions/AddAttractionsForm.jsp' />">add
 													Attractions</a></li>
 										</ul></li>
-
-									<li><a href="<c:url value='./jsp01/RestaurantHomepage.jsp'/>">Restaurant</a></li>
+					
+									<li><a
+										href="<c:url value='/jsp01/RestaurantHomepage.jsp'/>">Restaurant</a></li>
 								</ul>
 							</nav>
 							<a href="<c:url value='/orderRoom/SearchOrderServlet' />"><i

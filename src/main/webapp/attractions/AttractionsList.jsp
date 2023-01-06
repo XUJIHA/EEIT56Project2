@@ -94,10 +94,11 @@ String basePath9= request.getScheme() + "://" + request.getServerName() + ":" + 
 
 <!-- 	<link rel="stylesheet" href="/project2/css/bootstrap.min.css"> -->
 <%-- 	<link rel="stylesheet" href="<%=basePath%>" type="text/css"> --%>
-<link rel="stylesheet" href="/Team3_Hibernate/css/styleA.css" type="text/css">
+<link rel="stylesheet" href="/Team3/css/styleA.css" type="text/css">
 	
 </head>
 <body>
+<div>
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader"></div>
@@ -126,22 +127,23 @@ String basePath9= request.getScheme() + "://" + request.getServerName() + ":" + 
 					</ul>
 				</div>
 			</div>
-			<a href="<c:url value='./loginlogout/controller/searchAllServlet'/>"
-				class="bk-btn">Customer Data</a>
+			<a href="<c:url value='/loginlogout/controller/searchAllServlet'/>" class="bk-btn">Customer Data</a>
 		</div>
 		<nav class="mainmenu mobile-menu">
 			<ul>
-				<li><a href="/Team3_Hibernate/LoginLogout/alreadyindex.jsp">Home</a></li>
+				<li><a href="<c:url value='/LoginLogout/alreadyindex.jsp'/>">Home</a></li>
 				<li><a href="<c:url value='/ShowAllServlet' />">Rooms</a></li>
-				<li><a href="./Gift/gift.jsp">Gifts</a></li>
-				<li><a href="<c:url value='/showAttractionsServlet' />">Attractions</a>
+				<li><a href="<c:url value='/Gift/gift.jsp'/>">Gifts</a></li>
+				<li><a href="<c:url value='attractionsList' />">Attractions</a>
 					<ul class="dropdown">
-						<li><a
-							href="<c:url value='/attractions/AddAttractionsForm.jsp' />">add
-								Attractions</a></li>
-					</ul></li>
-
-				<li><a href="<c:url value='./jsp01/RestaurantHomepage.jsp'/>">Restaurant</a></li>
+						<li>
+							<a href="<c:url value='/attractions/AddAttractionsForm.jsp' />">add Attractions</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="<c:url value='/jsp01/RestaurantHomepage.jsp'/>">Restaurant</a>
+				</li>
 			</ul>
 		</nav>
 		<div id="mobile-menu-wrap"></div>
@@ -179,8 +181,8 @@ String basePath9= request.getScheme() + "://" + request.getServerName() + ":" + 
 							 <a href="<c:url value='/loginlogout/controller/searchAllServlet'/>" class="bk-btn">Customer
 								Data</a>
 							<div class="language-option">
-								<img src="./img/flag.jpg" alt=""> <span>EN <i
-									class="fa fa-angle-down"></i></span>
+								<img src="<c:url value='/img/flag.jpg'/>" alt="">
+								<span>EN <i class="fa fa-angle-down"></i></span>
 								<div class="flag-dropdown">
 									<ul>
 										<li><a href="#">Zi</a></li>
@@ -198,27 +200,29 @@ String basePath9= request.getScheme() + "://" + request.getServerName() + ":" + 
 				<div class="row">
 					<div class="col-lg-2">
 						<div class="logo">
-							<a href="./LoginLogout/alreadyindex.jsp"> <img src="img/logo.png" alt="">
+							<a href="<c:url value='/LoginLogout/alreadyindex.jsp'/>"> 
+								<img src="<c:url value='/Team3_Hibernate/img/logo.png'/>" alt="">
 							</a>
 						</div>
 					</div>
 					<div class="col-lg-10">
 						<div class="nav-menu">
 							<nav class="mainmenu">
-								<ul>
-									<li><a href="../LoginLogout/alreadyindex.jsp">Home</a></li>
-									<li><a href="<c:url value='/ShowAllServlet' />">Rooms</a></li>
-									<li><a href="../Gift/gift.jsp">Gifts</a></li>
-									<li><a href="<c:url value='/showAttractionsServlet' />">Attractions</a>
-										<ul class="dropdown">
-											<li><a
-												href="<c:url value='/attractions/AddAttractionsForm.jsp' />">add
-													Attractions</a></li>
-										</ul></li>
-
-									<li><a
-										href="<c:url value='../jsp01/RestaurantHomepage.jsp'/>">Restaurant</a></li>
-								</ul>
+							  <ul>
+								<li><a href="<c:url value='/LoginLogout/alreadyindex.jsp'/>">Home</a></li>
+								<li><a href="<c:url value='/ShowAllServlet' />">Rooms</a></li>
+								<li><a href="<c:url value='/Gift/gift.jsp'/>">Gifts</a></li>
+								<li><a href="<c:url value='attractionsList' />">Attractions</a>
+									<ul class="dropdown">
+										<li>
+											<a href="<c:url value='/attractions/AddAttractionsForm.jsp' />">add Attractions</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="<c:url value='/jsp01/RestaurantHomepage.jsp'/>">Restaurant</a>
+								</li>
+							  </ul>
 							</nav>
 							<a href="<c:url value='/orderRoom/SearchOrderServlet' />"><i
 								class="fa-solid fa-cart-shopping" style="color: black"></i></a>
@@ -250,9 +254,12 @@ String basePath9= request.getScheme() + "://" + request.getServerName() + ":" + 
 				</form>
             </div><br>
 			<div>
-				<c:forEach var='attractions' items='${attractionsBean}' varStatus='vs'>
-					<c:if test='${vs.first}'>
-						<c:out escapeXml='false' value='<table style="height: 100px;" class="table table-hover table-bordered ">'  />
+<!-- 				{aBean.name}{aBean.address}{aBean.serviceHour}{aBean.serviceHour2}{aBean.introduction}{aBean.phone}{aBean.b}{aBean.b} -->
+<%-- 				<c:forEach var='aBean' items='${aBean}' varStatus='vs'> --%>
+<%-- 					<c:if test='${vs.first}'> --%>
+
+<%-- 						<c:out escapeXml='false' value='<table style="height: 100px;" class="table table-hover table-bordered ">'  /> --%>
+					<table style="height: 100px;" class="table table-hover table-bordered ">
 						<thead class="table-light">
 							<tr class="align-middle text-center">
 								<th scope="col">項目</th>
@@ -266,23 +273,26 @@ String basePath9= request.getScheme() + "://" + request.getServerName() + ":" + 
 								<th scope="col" >刪除</th>
 							</tr>
 						</thead>
-					</c:if>
-					<tr class="align-middle text-center">
-						<th scope="row"><c:out value="${ attractions.attractionsId }" /></th>
-						<td><c:out value="${ attractions.name }"/></td>
-						<td><c:out value="${ attractions.address }"/></td>
-						<td width='150px'><c:out value="${ attractions.serviceHour } - ${ attractions.serviceHour2 }"/></td>
-						<td class="AutoNewline"><c:out value="${ attractions.introduction }"/></td>
-						<td><c:out value="${ attractions.phone }"/></td>
-						<td class="align-middle"><img src="<c:url value='/getImage?id=${ attractions.attractionsId }'/>" class="img img-fluid img-thumbnail d-block mx-auto"></td>
-		<!-- 				height='300px' width='250px' -->
-						<td><form method="POST" action="<c:url value='/edit' />"><button class="form-control" name="id" value="${attractions.attractionsId}" type="submit">Edit</button></form></td>
-<%-- 						<td><a class="delete form-control" href='javascript:' id="${attractions.attractionsId}">Delete</a></td> --%>
-						<td><form method="POST" action="javascript:"><button class="delete form-control" name="id" id="${attractions.attractionsId}" type="submit">Delete</button></form></td>
-					<c:if test='${vs.last}'>
-						<c:out escapeXml='false' value='</table>' />
-					</c:if>
-				</c:forEach><hr>
+<%-- 					</c:if> --%>
+						<tbody>
+							<c:forEach var='aBean' items='${aBean}'>
+								<tr class="align-middle text-center">
+									<th scope="row"><c:out value="${ aBean.attractionsId }" /></th>
+									<td><c:out value="${ aBean.name }"/></td>
+									<td><c:out value="${ aBean.address }"/></td>
+									<td width='150px'><c:out value="${ aBean.serviceHour } - ${ aBean.serviceHour2 }"/></td>
+									<td class="AutoNewline"><c:out value="${ aBean.introduction }"/></td>
+									<td><c:out value="${ aBean.phone }"/></td>
+									<td class="align-middle"><img src="<c:url value='/getImage?id=${ aBean.attractionsId }'/>" class="img img-fluid img-thumbnail d-block mx-auto"></td>
+									<td><form method="POST" action="<c:url value='/edit' />"><button class="form-control" name="id" value="${aBean.attractionsId}" type="submit">Edit</button></form></td>
+	<%-- 						<td><a class="delete form-control" href='javascript:' id="${attractions.attractionsId}">Delete</a></td> --%>
+									<td><form method="POST" action="javascript:"><button class="delete form-control" name="id" id="${aBean.attractionsId}" type="submit">Delete</button></form></td>
+	<%-- 					<c:if test='${vs.last}'> --%>
+							</c:forEach>
+						</tbody>
+					</table><hr>
+<%-- 						<c:out escapeXml='false' value='</table>' /> --%>
+<%-- 					</c:if> --%>
 			</div>
 <!-- 			<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> -->
 <!-- 			<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
@@ -384,18 +394,18 @@ String basePath9= request.getScheme() + "://" + request.getServerName() + ":" + 
 		<!-- Search model end -->
 	
 		<!-- Js Plugins -->
-<!-- 		<script src="js/jquery-3.3.1.min.js"></script> -->
+		<script src="/Team3/js/jquery-3.3.1.min.js"></script>
 <!-- 		<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> -->
-<!-- 		<script src="js/bootstrap.min.js"></script> -->
-<!-- 		<script src="js/jquery.magnific-popup.min.js"></script> -->
-<!-- 		<script src="js/jquery.nice-select.min.js"></script> -->
-<!-- 		<script src="js/jquery-ui.min.js"></script> -->
-<!-- 		<script src="js/jquery.slicknav.js"></script> -->
-<!-- 		<script src="js/owl.carousel.min.js"></script> -->
-<!-- 		<script src="js/main.js"></script> -->
-<!-- 		<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> -->
+		<script src="/Team3/js/bootstrap.min.js"></script>
+		<script src="/Team3/js/jquery.magnific-popup.min.js"></script>
+		<script src="/Team3/js/jquery.nice-select.min.js"></script>
+		<script src="/Team3/js/jquery-ui.min.js"></script>
+		<script src="/Team3/js/jquery.slicknav.js"></script>
+		<script src="/Team3/js/owl.carousel.min.js"></script>
+		<script src="/Team3/js/main.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-		<script src="/Team3_Hibernate/js/attractions.js"></script>
+		<script src="/Team3/js/attractions.js"></script>
 <!-- <script>attractions.js</script> -->
 	</div>
 </body>

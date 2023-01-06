@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,8 +35,7 @@ String basePath17 = request.getScheme() + "://" + request.getServerName() + ":" 
 <script src="<%=basePath15%>"></script>
 <script src="<%=basePath16%>"></script>
 <script src="<%=basePath17%>"></script>
-<script src="https://kit.fontawesome.com/27e0c99202.js"
-	crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/27e0c99202.js" crossorigin="anonymous"></script>
 <!-- Css Styles -->
 <!-- 絕對路徑 -->
 <% 
@@ -111,22 +110,23 @@ String basePath9= request.getScheme() + "://" + request.getServerName() + ":" + 
 					</ul>
 				</div>
 			</div>
-			<a href="<c:url value='/loginlogout/controller/searchAllServlet'/>"
-				class="bk-btn">Customer Data</a>
+			<a href="<c:url value='/loginlogout/controller/searchAllServlet'/>" class="bk-btn">Customer Data</a>
 		</div>
 		<nav class="mainmenu mobile-menu">
 			<ul>
-				<li><a href="./LoginLogout/alreadyindex.jsp">Home</a></li>
+				<li><a href="<c:url value='/LoginLogout/alreadyindex.jsp'/>">Home</a></li>
 				<li><a href="<c:url value='/ShowAllServlet' />">Rooms</a></li>
-				<li><a href="./Gift/gift.jsp">Gifts</a></li>
+				<li><a href="<c:url value='/Gift/gift.jsp'/>">Gifts</a></li>
 				<li><a href="<c:url value='/showAttractionsServlet' />">Attractions</a>
 					<ul class="dropdown">
-						<li><a
-							href="<c:url value='/attractions/AddAttractionsForm.jsp' />">add
-								Attractions</a></li>
-					</ul></li>
-
-				<li><a href="<c:url value='./jsp01/RestaurantHomepage.jsp'/>">Restaurant</a></li>
+						<li>
+							<a href="<c:url value='/attractions/AddAttractionsForm.jsp' />">add Attractions</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="<c:url value='/jsp01/RestaurantHomepage.jsp'/>">Restaurant</a>
+				</li>
 			</ul>
 		</nav>
 		<div id="mobile-menu-wrap"></div>
@@ -164,8 +164,8 @@ String basePath9= request.getScheme() + "://" + request.getServerName() + ":" + 
 							 <a href="<c:url value='/loginlogout/controller/searchAllServlet'/>" class="bk-btn">Customer
 								Data</a>
 							<div class="language-option">
-								<img src="../img/flag.jpg" alt=""> <span>EN <i
-									class="fa fa-angle-down"></i></span>
+								<img src="<c:url value='/img/flag.jpg'/>" alt="">
+								<span>EN <i class="fa fa-angle-down"></i></span>
 								<div class="flag-dropdown">
 									<ul>
 										<li><a href="#">Zi</a></li>
@@ -183,27 +183,29 @@ String basePath9= request.getScheme() + "://" + request.getServerName() + ":" + 
 				<div class="row">
 					<div class="col-lg-2">
 						<div class="logo">
-							<a href="../LoginLogout/alreadyindex.jsp"> <img src="../img/logo.png" alt="">
+							<a href="<c:url value='/LoginLogout/alreadyindex.jsp'/>"> 
+								<img src="<c:url value='/img/logo.png'/>" alt="">
 							</a>
 						</div>
 					</div>
 					<div class="col-lg-10">
 						<div class="nav-menu">
 							<nav class="mainmenu">
-								<ul>
-									<li><a href="../LoginLogout/alreadyindex.jsp">Home</a></li>
-									<li><a href="<c:url value='/ShowAllServlet' />">Rooms</a></li>
-									<li><a href="../Gift/gift.jsp">Gifts</a></li>
-									<li><a href="<c:url value='/showAttractionsServlet' />">Attractions</a>
-										<ul class="dropdown">
-											<li><a
-												href="<c:url value='/attractions/AddAttractionsForm.jsp' />">add
-													Attractions</a></li>
-										</ul></li>
-
-									<li><a
-										href="<c:url value='../jsp01/RestaurantHomepage.jsp'/>">Restaurant</a></li>
-								</ul>
+							  <ul>
+								<li><a href="<c:url value='/LoginLogout/alreadyindex.jsp'/>">Home</a></li>
+								<li><a href="<c:url value='/ShowAllServlet' />">Rooms</a></li>
+								<li><a href="<c:url value='/Gift/gift.jsp'/>">Gifts</a></li>
+								<li><a href="<c:url value='/showAttractionsServlet' />">Attractions</a>
+									<ul class="dropdown">
+										<li>
+											<a href="<c:url value='/attractions/AddAttractionsForm.jsp' />">add Attractions</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="<c:url value='/jsp01/RestaurantHomepage.jsp'/>">Restaurant</a>
+								</li>
+							  </ul>
 							</nav>
 							<a href="<c:url value='/orderRoom/SearchOrderServlet' />"><i
 								class="fa-solid fa-cart-shopping" style="color: black"></i></a>
@@ -220,7 +222,7 @@ String basePath9= request.getScheme() + "://" + request.getServerName() + ":" + 
 	<!-- Header End -->
 
 <div class="container">
-        <form name="addAttractionsForm" action="<c:url value='/attractionsServlet'  />" method="POST" enctype="multipart/form-data">
+        <form action="checkadd.controller" method="POST" enctype="multipart/form-data">
 <!--        	    <header> -->
 <!-- 		        <h1>新增景點</h1> -->
 <!-- 		    </header> -->
@@ -233,33 +235,39 @@ String basePath9= request.getScheme() + "://" + request.getServerName() + ":" + 
 <!-- <i class="fa-sharp fa-solid fa-circle-exclamation"></i>  -->
 			<div class="row">
                 <label for=name class="form-label col-sm-1">景點名稱</label>
-			    <input class="form-control col-sm-5" type="text" name="name" value="${param.name }" id="name" placeholder="請輸入景點名稱" size="20" autofocus autocomplete="off">
-                <div class="col-sm-2" style="color:#FF0000; font-size:80%; display: inline">${ErrorMsg.name}</div>
+<%-- 			    <input class="form-control col-sm-5" type="text" name="name" value="${param.name }" id="name" placeholder="請輸入景點名稱" size="20" autofocus autocomplete="off"> --%>
+			    <input class="form-control col-sm-5" type="text" name="name" id="name" placeholder="請輸入景點名稱" size="20" autofocus autocomplete="off">
+                <div class="col-sm-2" style="color:#FF0000; font-size:80%; display: inline">${errors.name}</div>
             </div><br>
             <div class="row">
                 <label for=address class="form-label col-sm-1">地址</label>
-                <input class="form-control col-sm-5" type="text" name="address" value="${param.address }" id="address" placeholder="請輸入景點地址" size="20" autofocus autocomplete="off">
-                <div class="col-sm-2" style="color:#FF0000; font-size:80%; display: inline">${ErrorMsg.address}</div>
+<%--                 <input class="form-control col-sm-5" type="text" name="address" value="${param.address }" id="address" placeholder="請輸入景點地址" size="20" autofocus autocomplete="off"> --%>
+                <input class="form-control col-sm-5" type="text" name="address" id="address" placeholder="請輸入景點地址" size="20" autofocus autocomplete="off">
+                <div class="col-sm-2" style="color:#FF0000; font-size:80%; display: inline">${errors.address}</div>
             </div><br>
 	  		<div class="row">
 	  			<label for="serviceHour" class="form-label col-sm-1">營業時間</label>
-				<input class="form-control col-sm-2" id="serviceHour" type="time" name="serviceHour" value="${param.serviceHour } " min="00:00" max="24:00"/>
-               	<input class="form-control col-sm-2" id="serviceHour2" type="time" name="serviceHour2" value="${param.serviceHour2 }" min="00:00" max="24:00"/>
-               	<div class="col-sm-2" style="color:#FF0000; font-size:80%; display: inline">${ErrorMsg.serviceHour}</div>
+<%-- 				<input class="form-control col-sm-2" id="serviceHour" type="time" name="serviceHour" value="${param.serviceHour } " min="00:00" max="24:00"/> --%>
+               	<input class="form-control col-sm-2" id="serviceHour" type="time" name="serviceHour" min="00:00" max="24:00"/>
+               	<input class="form-control col-sm-2" id="serviceHour2" type="time" name="serviceHour2" min="00:00" max="24:00"/>
+               	<div class="col-sm-2" style="color:#FF0000; font-size:80%; display: inline">${errors.serviceHour}</div>
 	    	</div><br>
             <div class="row">
                 <label for="introduction" class="form-label col-sm-1">介紹</label>
-                <textarea class="form-control col-sm-5" name="introduction" id="introduction" cols="40" rows="7">${param.introduction }</textarea>
-                <div class="col-sm-2" style="color:#FF0000; font-size:80%; display: inline">${ErrorMsg.introduction}</div>
+<%--                 <textarea class="form-control col-sm-5" name="introduction" id="introduction" cols="40" rows="7">${param.introduction }</textarea> --%>
+                <textarea class="form-control col-sm-5" name="introduction" id="introduction" cols="40" rows="7"></textarea>
+                <div class="col-sm-2" style="color:#FF0000; font-size:80%; display: inline">${errors.introduction}</div>
             </div><br>
             <div class="row">
                 <label for="phone" class="form-label col-sm-1">電話</label>
-                <input class="form-control col-sm-5" type="text" name="phone" value="${param.phone }" id="phone" maxlength="10" autocomplete="off">
-                <div class="col-sm-2" style="color:#FF0000; font-size:80%; display: inline">${ErrorMsg.phone}</div>
+<%--                 <input class="form-control col-sm-5" type="text" name="phone" value="${param.phone }" id="phone" maxlength="10" autocomplete="off"> --%>
+                <input class="form-control col-sm-5" type="text" name="phone" id="phone" maxlength="10" autocomplete="off">
+                <div class="col-sm-2" style="color:#FF0000; font-size:80%; display: inline">${errors.phone}</div>
             </div><br>
              <div class="row upload-header">
                 <label for="file1" class="form-label col-sm-1 input-group-text">上傳照片</label>
-                <input class="form-control col-sm-5" type="file" name="file1" value="${param.file1 }" id="file1" multiple>
+<%--                 <input class="form-control col-sm-5" type="file" name="file1" value="${param.file1 }" id="file1" multiple> --%>
+                <input class="form-control col-sm-5" type="file" name="file1" id="file1" multiple>
             	<div class="img-box" id="frames" ><!-- 存放預覽圖片 --></div>
             </div>
             <br>
@@ -376,7 +384,7 @@ String basePath9= request.getScheme() + "://" + request.getServerName() + ":" + 
 <!-- 	<script src="js/main.js"></script> -->
 <!-- 	<script src="https://kit.fontawesome.com/35ee305c92.js" crossorigin="anonymous"></script> -->
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-		<script src="/Team3_Hibernate/js/attractions.js"></script>
+		<script src="/Team3/js/attractions.js"></script>
 </body>
 
 </html>

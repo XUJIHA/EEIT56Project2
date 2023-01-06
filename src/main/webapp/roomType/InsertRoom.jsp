@@ -31,6 +31,8 @@
 <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
 <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" href="css/style.css" type="text/css">
+<script src="https://kit.fontawesome.com/27e0c99202.js"
+	crossorigin="anonymous"></script>
     <style>
         .t1 {
             width:350px;
@@ -69,22 +71,23 @@
 					</ul>
 				</div>
 			</div>
-			<a href="#" class="bk-btn">Booking Now</a>
+			<a href="<c:url value='/loginlogout/controller/searchAllServlet'/>" class="bk-btn">Customer
+								Data</a>
 		</div>
 		<nav class="mainmenu mobile-menu">
 			<ul>
-                                    <li><a href="./alreadyindex.jsp">Home</a></li>
-                                    <li class="active"><a
-                                        href="<c:url value='/ShowAllServlet' />">Rooms</a></li>
-                                    <li><a href="./surviors.jsp">Gifts</a></li>
-                                    <li><a href="<c:url value='/showAttractionsServlet' />">Attractions</a>
-                                        <ul class="dropdown">
-                                            <li><a
-                                                href="<c:url value='/attractions/AddAttractionsForm.jsp' />">add
-                                                    Attractions</a></li>
-                                        </ul></li>
-                                    <li><a href="<c:url value='/RestaurantHomepage.jsp'/>">Restaurant</a></li>
-                                </ul>
+				<li><a href="../LoginLogout/alreadyindex.jsp">Home</a></li>
+				<li><a href="<c:url value='/ShowAllServlet' />">Rooms</a></li>
+				<li><a href="../Gift/gift.jsp">Gifts</a></li>
+				<li><a href="<c:url value='/showAttractionsServlet' />">Attractions</a>
+					<ul class="dropdown">
+						<li><a
+							href="<c:url value='/attractions/AddAttractionsForm.jsp' />">add
+								Attractions</a></li>
+					</ul></li>
+
+				<li><a href="<c:url value='../jsp01/RestaurantHomepage.jsp'/>">Restaurant</a></li>
+			</ul>
 		</nav>
 		<div id="mobile-menu-wrap"></div>
 		<div class="top-social">
@@ -119,7 +122,8 @@
 									class="fa fa-tripadvisor"></i></a> <a href="#"><i
 									class="fa fa-instagram"></i></a>
 							</div>
-							<a href="#" class="bk-btn">Booking Now</a>
+							<a href="<c:url value='/loginlogout/controller/searchAllServlet'/>" class="bk-btn">Customer
+								Data</a>
 							<div class="language-option">
 								<img src="img/flag.jpg" alt=""> <span>EN <i
 									class="fa fa-angle-down"></i></span>
@@ -140,7 +144,7 @@
 				<div class="row">
 					<div class="col-lg-2">
 						<div class="logo">
-							<a href="./index.html"> <img src="img/logo.png" alt="">
+							<a href="../LoginLogout/alreadyindex.jsp"> <img src="img/logo.png" alt="">
 							</a>
 						</div>
 					</div>
@@ -148,19 +152,22 @@
 						<div class="nav-menu">
 							<nav class="mainmenu">
 								<ul>
-                                    <li><a href="./alreadyindex.jsp">Home</a></li>
-                                    <li class="active"><a
-                                        href="<c:url value='/ShowAllServlet' />">Rooms</a></li>
-                                    <li><a href="./surviors.jsp">Gifts</a></li>
-                                    <li><a href="<c:url value='/showAttractionsServlet' />">Attractions</a>
-                                        <ul class="dropdown">
-                                            <li><a
-                                                href="<c:url value='/attractions/AddAttractionsForm.jsp' />">add
-                                                    Attractions</a></li>
-                                        </ul></li>
-                                    <li><a href="<c:url value='/RestaurantHomepage.jsp'/>">Restaurant</a></li>
-                                </ul>
+									<li><a href="../LoginLogout/alreadyindex.jsp">Home</a></li>
+									<li><a href="<c:url value='/ShowAllServlet' />">Rooms</a></li>
+									<li><a href="../Gift/gift.jsp">Gifts</a></li>
+									<li><a href="<c:url value='/showAttractionsServlet' />">Attractions</a>
+										<ul class="dropdown">
+											<li><a
+												href="<c:url value='/attractions/AddAttractionsForm.jsp' />">add
+													Attractions</a></li>
+										</ul></li>
+
+									<li><a
+										href="<c:url value='../jsp01/RestaurantHomepage.jsp'/>">Restaurant</a></li>
+								</ul>
 							</nav>
+							<a href="<c:url value='/orderRoom/SearchOrderServlet' />"><i
+								class="fa-solid fa-cart-shopping" style="color: #dfa974"></i></a>
 							<div class="nav-right search-switch">
 								<i class="icon_search"></i>
 							</div>
@@ -337,6 +344,7 @@
 	<script src="js/jquery.slicknav.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="https://kit.fontawesome.com/27e0c99202.js" crossorigin="anonymous"></script>
 <!-- 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script>

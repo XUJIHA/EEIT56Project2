@@ -37,6 +37,7 @@ String basePath17 = request.getScheme() + "://" + request.getServerName() + ":" 
 <script src="<%=basePath15%>"></script>
 <script src="<%=basePath16%>"></script>
 <script src="<%=basePath17%>"></script>
+<script src="https://kit.fontawesome.com/27e0c99202.js" crossorigin="anonymous"></script>
 <!-- Css Styles -->
 <!-- 絕對路徑 -->
 <% 
@@ -112,19 +113,23 @@ String basePath9= request.getScheme() + "://" + request.getServerName() + ":" + 
 					</ul>
 				</div>
 			</div>
-			 <a href="<c:url value='/CRUD/searchAllServlet'/>" class="bk-btn">Customer Data</a>
+			<a href="<c:url value='/loginlogout/controller/searchAllServlet'/>" class="bk-btn">Customer Data</a>
 		</div>
 		<nav class="mainmenu mobile-menu">
 			<ul>
-				<li><a href="./index.html">Home</a></li>
+				<li><a href="<c:url value='/LoginLogout/alreadyindex.jsp'/>">Home</a></li>
 				<li><a href="<c:url value='/ShowAllServlet' />">Rooms</a></li>
-				<li><a href="./surviors.jsp">Gifts</a></li>
-				<li class="active"><a href="<c:url value='/showAttractionsServlet' />">Attractions</a>
+				<li><a href="<c:url value='/Gift/gift.jsp'/>">Gifts</a></li>
+				<li><a href="<c:url value='/showAttractionsServlet' />">Attractions</a>
 					<ul class="dropdown">
-						<li><a
-							href="<c:url value='/attractions/AddAttractionsForm.jsp' />">addAttractions</a></li>
-					</ul></li>
-				<li><a href="<c:url value='/RestaurantHomepage.jsp'/>">Restaurant</a></li>
+						<li>
+							<a href="<c:url value='/attractions/AddAttractionsForm.jsp' />">add Attractions</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="<c:url value='/jsp01/RestaurantHomepage.jsp'/>">Restaurant</a>
+				</li>
 			</ul>
 		</nav>
 		<div id="mobile-menu-wrap"></div>
@@ -159,10 +164,10 @@ String basePath9= request.getScheme() + "://" + request.getServerName() + ":" + 
 									class="fa fa-tripadvisor"></i></a> <a href="#"><i
 									class="fa fa-instagram"></i></a>
 							</div>
-							 <a href="<c:url value='/CRUD/searchAllServlet'/>" class="bk-btn">Customer Data</a>
+							<a href="<c:url value='/loginlogout/controller/searchAllServlet'/>" class="bk-btn">Customer Data</a>
 							<div class="language-option">
-								<img src="img/flag.jpg" alt=""> <span>EN <i
-									class="fa fa-angle-down"></i></span>
+								<img src="<c:url value='/img/flag.jpg'/>" alt="">
+								<span>EN <i class="fa fa-angle-down"></i></span>
 								<div class="flag-dropdown">
 									<ul>
 										<li><a href="#">Zi</a></li>
@@ -179,27 +184,34 @@ String basePath9= request.getScheme() + "://" + request.getServerName() + ":" + 
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-2">
-						<div class="logo">
-							<a href="./index.html"> <img src="img/logo.png" alt="">
+							<div class="logo">
+							<a href="<c:url value='/LoginLogout/alreadyindex.jsp'/>"> 
+								<img src="<c:url value='/img/logo.png'/>" alt="">
 							</a>
 						</div>
 					</div>
 					<div class="col-lg-10">
 						<div class="nav-menu">
 							<nav class="mainmenu">
-								<ul>
-									<li><a href="./index.html">Home</a></li>
-									<li><a
-										href="<c:url value='/ShowAllServlet' />">Rooms</a></li>
-									<li><a href="./surviors.jsp">Gifts</a></li>
-									<li class="active"><a href="<c:url value='/showAttractionsServlet' />">Attractions</a>
-										<ul class="dropdown">
-											<li><a
-												href="<c:url value='/attractions/AddAttractionsForm.jsp' />">addAttractions</a></li>
-										</ul></li>
-									<li><a href="<c:url value='/RestaurantHomepage.jsp'/>">Restaurant</a></li>
-								</ul>
+							  <ul>
+								<li><a href="<c:url value='/LoginLogout/alreadyindex.jsp'/>">Home</a></li>
+								<li><a href="<c:url value='/ShowAllServlet' />">Rooms</a></li>
+								<li><a href="<c:url value='/Gift/gift.jsp'/>">Gifts</a></li>
+								<li><a href="<c:url value='/showAttractionsServlet' />">Attractions</a>
+									<ul class="dropdown">
+										<li>
+											<a href="<c:url value='/attractions/AddAttractionsForm.jsp' />">add Attractions</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="<c:url value='/jsp01/RestaurantHomepage.jsp'/>">Restaurant</a>
+								</li>
+							  </ul>
 							</nav>
+							<a href="<c:url value='/orderRoom/SearchOrderServlet' />">
+								<i class="fa-solid fa-cart-shopping" style="color: black"></i>
+							</a>
 							<div class="nav-right search-switch">
 								<i class="icon_search"></i>
 							</div>
@@ -249,7 +261,7 @@ String basePath9= request.getScheme() + "://" + request.getServerName() + ":" + 
                 <input class="form-control col-sm-5" type="file" name="file1" value="${attractionsBean.image1 }" id="file1" multiple>
             </div><br>
             <div class="row">
-	            <input class="form-control col-sm-5" type="submit" value="儲存">
+	            <input class="form-control col-sm-6" type="submit" value="儲存">
         	</div><br>
         </form>
     </div>

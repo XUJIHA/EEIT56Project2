@@ -39,6 +39,8 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
 <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" href="css/style.css" type="text/css">
+<script src="https://kit.fontawesome.com/27e0c99202.js"
+	crossorigin="anonymous"></script>
     <style>
         .t1 {
             width:350px;
@@ -77,25 +79,26 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
                     </ul>
                 </div>
             </div>
-            <a href="#" class="bk-btn">Booking Now</a>
+            <a href="<c:url value='/loginlogout/controller/searchAllServlet'/>" class="bk-btn">Customer Data</a>
         </div>
         <nav class="mainmenu mobile-menu">
-            <ul>
-                <li class="active"><a href="./index.html">Home</a></li>
-                <li><a href="./rooms.html">Rooms</a></li>
-                <li><a href="./about-us.html">About Us</a></li>
-                <li><a href="./pages.html">Pages</a>
-                    <ul class="dropdown">
-                        <li><a href="./room-details.html">Room Details</a></li>
-                        <li><a href="#">Deluxe Room</a></li>
-                        <li><a href="#">Family Room</a></li>
-                        <li><a href="#">Premium Room</a></li>
-                    </ul>
-                </li>
-                <li><a href="./blog.html">News</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
+			<ul>
+				<li><a href="<c:url value='/LoginLogout/alreadyindex.jsp'/>">Home</a></li>
+				<li><a href="<c:url value='/ShowAllServlet' />">Rooms</a></li>
+				<li><a href="<c:url value='/Gift/gift.jsp'/>">Gifts</a></li>
+				<li><a href="<c:url value='/showAttractionsServlet' />">Attractions</a>
+					<ul class="dropdown">
+						<li>
+							<a href="<c:url value='/attractions/AddAttractionsForm.jsp' />">add Attractions</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="<c:url value='/jsp01/RestaurantHomepage.jsp'/>">Restaurant</a>
+				</li>
+			</ul>
+			
+		</nav>
         <div id="mobile-menu-wrap"></div>
         <div class="top-social">
             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -129,7 +132,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
                                 <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
-                            <a href="#" class="bk-btn">Booking Now</a>
+                           <a href="<c:url value='/loginlogout/controller/searchAllServlet'/>" class="bk-btn">Customer Data</a>
                             <div class="language-option">
                                 <img src="img/flag.jpg" alt="">
                                 <span>EN <i class="fa fa-angle-down"></i></span>
@@ -150,30 +153,32 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
                 <div class="row">
                     <div class="col-lg-2">
                         <div class="logo">
-                            <a href="./index.html">
-                                <img src="img/logo.png" alt="">
+                            <a href="<c:url value='/LoginLogout/alreadyindex.jsp'/>"> 
+                            <img src="img/logo.png" alt="">
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-10">
                         <div class="nav-menu">
                             <nav class="mainmenu">
-                                <ul>
-                                    <li class="active"><a href="./index.html">Home</a></li>
-                                    <li><a href="./rooms.html">Rooms</a></li>
-                                    <li><a href="./about-us.html">About Us</a></li>
-                                    <li><a href="./pages.html">Pages</a>
-                                        <ul class="dropdown">
-                                            <li><a href="./room-details.html">Room Details</a></li>
-                                            <li><a href="./blog-details.html">Blog Details</a></li>
-                                            <li><a href="#">Family Room</a></li>
-                                            <li><a href="#">Premium Room</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="./blog.html">News</a></li>
-                                    <li><a href="./contact.html">Contact</a></li>
-                                </ul>
+                              <ul>
+								<li><a href="<c:url value='/LoginLogout/alreadyindex.jsp'/>">Home</a></li>
+								<li><a href="<c:url value='/ShowAllServlet' />">Rooms</a></li>
+								<li><a href="<c:url value='/Gift/gift.jsp'/>">Gifts</a></li>
+								<li><a href="<c:url value='/showAttractionsServlet' />">Attractions</a>
+									<ul class="dropdown">
+										<li>
+											<a href="<c:url value='/attractions/AddAttractionsForm.jsp' />">add Attractions</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="<c:url value='/jsp01/RestaurantHomepage.jsp'/>">Restaurant</a>
+								</li>
+							  </ul>
                             </nav>
+                            <a href="<c:url value='/orderRoom/SearchOrderServlet' />"><i
+								class="fa-solid fa-cart-shopping" style="color: #dfa974"></i></a>
                             <div class="nav-right search-switch">
                                 <i class="icon_search"></i>
                             </div>

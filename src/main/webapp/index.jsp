@@ -27,16 +27,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <base href="<%=basePath%>">
 <!-- 絕對路徑 -->
 <!-- Css Styles -->
-<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-<link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-<link rel="stylesheet" href="css/flaticon.css" type="text/css">
-<link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-<link rel="stylesheet" href="css/nice-select.css" type="text/css">
-<link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-<link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-<link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="http://localhost:8080/Team3/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="http://localhost:8080/Team3/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="http://localhost:8080/Team3/css/elegant-icons.css" type="text/css">
+<link rel="stylesheet" href="http://localhost:8080/Team3/css/flaticon.css" type="text/css">
+<link rel="stylesheet" href="http://localhost:8080/Team3/css/owl.carousel.min.css" type="text/css">
+<link rel="stylesheet" href="http://localhost:8080/Team3/css/nice-select.css" type="text/css">
+<link rel="stylesheet" href="http://localhost:8080/Team3/css/jquery-ui.min.css" type="text/css">
+<link rel="stylesheet" href="http://localhost:8080/Team3/css/magnific-popup.css" type="text/css">
+<link rel="stylesheet" href="http://localhost:8080/Team3/css/slicknav.min.css" type="text/css">
+<link rel="stylesheet" href="http://localhost:8080/Team3/css/style.css" type="text/css">
 </head>
 <body>
 
@@ -708,14 +708,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!-- Search model end -->
 
 	<!-- Js Plugins -->
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/jquery.nice-select.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/jquery.slicknav.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="http://localhost:8080/Team3/js/jquery-3.3.1.min.js"></script>
+	<script src="http://localhost:8080/Team3/js/bootstrap.min.js"></script>
+	<script src="http://localhost:8080/Team3/js/jquery.magnific-popup.min.js"></script>
+	<script src="http://localhost:8080/Team3/js/jquery.nice-select.min.js"></script>
+	<script src="http://localhost:8080/Team3/js/jquery-ui.min.js"></script>
+	<script src="http://localhost:8080/Team3/js/jquery.slicknav.js"></script>
+	<script src="http://localhost:8080/Team3/js/owl.carousel.min.js"></script>
+	<script src="http://localhost:8080/Team3/js/main.js"></script>
 	<c:if test="${logOutStatus==1}">
 		<script>
 			alert("登出成功!!");
